@@ -1,0 +1,104 @@
+1.Why do we use spring-boot ?
+2.What is dependency injection ?
+3.What is @enableAutoconfiguration ?
+4.Explain @resrcontroller ?
+5.Explain diffrent types of @controller ?
+6.What is loosly and tightly coupled systems ?
+7.What is circular dependency how can it be resolved ?
+
+Ans :Redesign Beans: Consider redesigning your beans to eliminate the circular dependency. This is the best approach. Refactor your code so that the dependencies are more straightforward and don’t form a loop1.
+Use @Lazy Annotation: Mark one of the dependencies as lazy using the @Lazy annotation. Spring will create a proxy for the bean, delaying its initialization until it’s actually needed. This helps break the circular reference
+Setter Injection: Instead of constructor-based injection, use setter injection. This way, Spring can create the beans first and then set their dependencies later, avoiding circular issues
+Allow Circular References (Last Resort): In Spring Boot 2.6.x, you can allow circular references by setting spring.main.allow-circular-references to true. However, this should be a last resort, as it’s not recommended for clean design
+
+8.what are the different types of dependency injection and when to use each one?
+
+Constructor Injection: Dependencies are provided through a class constructor. When using constructor injection, the dependencies are passed as arguments to the constructor when creating an instance of the class. This approach ensures that the required dependencies are available right from the start
+Setter Injection: In setter injection, the client exposes a setter method that the injector uses to inject the dependency. The client class provides a public setter method for each dependency it needs. The injector sets the dependencies by invoking these setter methods after creating the object
+Interface Injection: In this approach, the dependency’s interface provides an injector method that will inject the dependency into any client passed to it. Clients must implement an interface that exposes a setter method accepting the dependency. The injector then uses this method to inject the dependency
+
+9.What is REST ?
+
+10.Working of hashmap what happens when linked lists are full ?
+11.Diff between hashmap map and set ?
+12.What are the features introduced in java 8?
+13.Explain about functional interfaces and how they are used in lambdas ?
+14.What is predicate  function and consumer?
+15.does functional interfaces have only one function ?
+
+yes default and static functions
+
+16.What is Service Discovery in microservices  ?
+
+Service discovery in microservices is the process of dynamically locating and identifying available services within a distributed system. In a microservices architecture, where applications consist of many small, independent services, service discovery plays a crucial role in enabling communication and collaboration between these services1.
+
+Here’s how it works:
+
+Service Registry:
+A centralized server (known as the service registry) maintains a global record of all microservices’ network locations.
+Each microservice registers and discloses its location to the service registry at regular intervals2.
+Dynamic Location:
+As microservices scale up, down, or move across instances (due to autoscaling or version releases), their network locations change dynamically.
+Service discovery ensures that other microservices can adapt to these changes and find the correct instances to communicate with3.
+In summary, service discovery helps microservices find each other in a flexible, dynamic environment, allowing them to collaborate seamlessly. 😊🌟
+
+17.Write a sql query to find 2nd largest slary fromemployee table ?
+18.What is indexing ?
+19.Diff between remove truncate and drop ? why not use remove * to truncate ?
+20.What is a cicuit breaker ?
+
+
+21.does java support multiple inheritance why or why not ?
+In Java, multiple inheritance—where a class inherits properties from more than one parent class—is not supported. Let me explain why:
+
+Ambiguity and Complexity:
+When two or more superclasses have methods with the same signature, calling such a method from a subclass becomes ambiguous. For instance, if both Parent1 and Parent2 have a method called fun(), the compiler cannot determine which one to call when you create an instance of Test that extends both classes.
+This situation leads to the diamond problem, which occurs when multiple inheritance causes confusion about method resolution.
+
+And the 2 coding questions in the project
+
+
+Another interview experience 
+
+
+Questions:
+
+1.Spring annotations done
+
+2.Spring security 
+
+3.Spring Boot annotation for enableAutoConfiguration done
+
+
+4.What is spring application context. done
+
+
+5.Hibernate,JPA Done
+
+6.how bean works done
+
+
+7.how springboot works internally done
+
+8.controller advice done
+
+9.How microservice communicate with db inside another microservice .done
+
+14.How print works internally in java. done 
+15.From string and object point of view how memory occupies done
+16.Runtime and compile time polymorphism done
+
+10.Rest api done
+
+11.Stream through the alphabet count from given String
+12.stream through an object and get the count of male and female employees and print them
+13.Streams map,flatmap filter,groupingby
+
+
+
+17.DTO (Data Transfer Object) concept
+18.Explain Factory pattern done
+19.Adapter pattern done
+20.How to create custom annotation.
+21.Code for consuming data from Kafka.
+22.How api call comes to a service done
