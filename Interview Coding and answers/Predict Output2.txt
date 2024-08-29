@@ -1,0 +1,109 @@
+
+1. Ouput of code ?
+
+ 
+ String s1 = "Java";
+        String s2 = "Java";
+        StringBuilder sb1 = new StringBuilder();
+        sb1.append("Ja").append("va");
+        System.out.println(s1 == s2);  // True
+        System.out.println(s1.equals(s2));  // True
+        System.out.println(sb1.toString() == s1);   // False
+        System.out.println(sb1.toString().equals(s1));  // True
+		
+		
+		    public static void main(String args[])
+        {
+            System.out.print("a");
+            try
+            {
+                System.out.print("b");
+                throw new IllegalArgumentException();
+            }
+            catch (RuntimeException e)
+            {
+                System.out.print("c");
+            }
+            finally
+            {
+                System.out.print("d");
+            }
+            System.out.print("e");
+        }
+    }
+	abcde
+	
+	
+	    class A {
+        A get() {
+            return this;
+        }
+    }
+    class B extends A {
+        B get() {
+            return this;
+        }
+        void message() {
+            System.out.println("Hello from B");
+        }
+    }
+    public class Main {
+        public static void main(String[] args) {
+            new B().get().message();
+        }
+    }
+	Hello from B
+	
+	
+	    public class Main {
+        public static void main(String[] args) {
+            List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+            Optional<String> result = names.stream()
+                    .filter(name -> name.startsWith("D"))
+                    .findFirst();
+
+            System.out.println(result.orElse("No match found"));
+        }
+    }No match found
+	
+	
+	        import java.util.*;
+
+    public class priorityQueue {
+        public static void main(String[] args)
+        {
+            PriorityQueue<Integer> queue
+                    = new PriorityQueue<>();
+            queue.add(11);
+            queue.add(10);
+            queue.add(22);
+            queue.add(5);
+            queue.add(12);
+            queue.add(2);
+
+            while (queue.isEmpty() == false)
+                System.out.printf("%d ", queue.remove());
+
+            System.out.println("\n");
+        }
+    }2,5,10,11,12,22
+	
+	
+	        import java.util.*;
+
+    public class Treeset {
+        public static void main(String[] args)
+        {
+            TreeSet<String> treeSet = new TreeSet<>();
+
+            treeSet.add("Geeks");
+            treeSet.add("For");
+            treeSet.add("Geeks");
+            treeSet.add("GeeksforGeeks");
+
+            for (String temp : treeSet)
+                System.out.printf(temp + " ");
+
+            System.out.println("\n");
+        }
+    }For Geeks GeeksforGeeks 

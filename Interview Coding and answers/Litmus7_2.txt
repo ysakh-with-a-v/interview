@@ -1,0 +1,32 @@
+
+1.Sort a list of numbers using stream ?
+
+       List<Integer> sortedNum = numberslist.stream().sorted(Comparator.comparingInt(num -> num))
+                .collect(Collectors.toList());
+				
+2.Sort a list of students based on their age ?				
+
+       List<Students> sortedstudent = numberslist.stream().sorted(Comparator.comparingInt(s -> s.getmarks())).forEach(S);
+        
+
+
+3.Write a program to print a a sequence of numbers whose sum is given ?
+ 
+  List<Integer> numberslist = Arrays.asList(8, 18, 35, 21, 15, 44);
+        int sum =41;
+
+
+        for(int i=0 ;i<sortedNum.size(); i++){
+            for(int j=i; j<sortedNum.size();j++) {
+                for (int k = j; k < sortedNum.size(); k++) {
+                    int tempSum = sortedNum.get(i) + sortedNum.get(j) + sortedNum.get(k);
+                    if (tempSum == sum) {
+                        System.out.println("The numbers are :" + sortedNum.get(i) + " " + sortedNum.get(j) + " " + sortedNum.get(k));
+                        break;
+                    }
+                }
+            }
+        }
+        System.out.println("The pairs do not exist");
+
+    }

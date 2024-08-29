@@ -1,0 +1,118 @@
+public interface a {
+
+ public void methordA();
+
+}
+
+public class b implements a{
+
+@Overide
+public void methordA(){
+//Some code sop(b)
+}
+
+}
+
+public class c extends b{
+
+@Overide
+public void methordA(){
+//Some code sop(c)
+}
+
+public class d{
+ 
+ psvm(){
+   b= new c;
+   c= new b;
+ 
+ }
+
+}
+
+
+
+
+interface Parent { 
+public int parentMethod(); 
+} 
+
+@FunctionalInterface
+interface Child  { 
+public int childMethod(); 
+public static void print();
+
+}
+
+class Employee {
+
+private final String name;
+
+private final List<String> addresses ;
+
+public Employee(name,address){
+this.name=name;
+for
+}
+
+getaddresses(){
+new Arraylist<String>(addresses);
+}
+
+@PostMapping
+public ResponseEntity<HTTPResponse> saveEmployee(@RequestParam int id,@RequestBody String name,@pathparame){
+	empService.get(emp.getid());
+	return new ResponseEntity<httpstaus.ok>;
+}
+
+
+Find the continuous sequences of numbers in given input.
+e.g input 1 2 3 4 8 5 9 a 6 7 8 4 @ -5 -7 -3 -2 -1 10 1200
+output
+1 2 3 4
+6 7 8
+-3 -2 -1
+
+1.Given a string of numbers and character find the max sequence that happens here ?
+The answer is not compleate !!
+
+String srt= "1 2 3 4 8 5 9 a 6 7 8 4 @ -5 -7 -3 -2 -1 10 1200";
+
+String[] stringarr =str.split(" ");
+
+int tempSeq=0;
+int firstindex;
+int lastindex;
+
+for(int i=1;i<stringarr.length();i++){
+	Integer value=null;
+	try{
+	 value=Integer.parseInt(stringarr[i])
+	}catch(Exception e){
+		if(tempseq>0){
+		for()
+		}
+	  tempSeq=0;
+	}
+	if(value!=null){
+	
+	if(stringarr[i]-stringarr[i-1]==1){
+		tempSeq ++
+	}else{
+		if(tempSeq>maxSeq){
+		maxSeq=tempSeq;
+		firstindex=i-tempSeq;
+		lastindex=i;
+		
+		}
+	}
+	}
+
+}
+
+
+
+
+}
+
+

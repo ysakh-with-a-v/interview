@@ -1,0 +1,26 @@
+1. Reverse a string using streams ?      
+
+	  String str = "Hello, World!";
+        
+        String reversedStr = Stream.of(str)
+                                   .map(word -> new StringBuilder(word).reverse())
+                                   .collect(Collectors.joining());
+        
+        System.out.println("Original String: " + str);
+        System.out.println("Reversed String: " + reversedStr);
+		
+2.Given a list of strings, write a Java program using streams to group the strings by their length.
+        
+        List<String> listOfStrings = Arrays.asList("abc","xy","x","bca");
+
+        Map<Integer, List<String>> result = listOfStrings.stream().collect(Collectors.groupingBy(s -> s.length()));
+
+        System.out.println(result);
+
+3.Given a list of integers, write a Java program using streams to find the second largest number ?
+
+        List<Integer> listOfNumbers = Arrays.asList(10,100,1,20,40,23);
+
+        List<Integer> result1 = listOfNumbers.stream().sorted(Comparator.comparingInt(n -> n)).collect(Collectors.toList());
+
+        System.out.println(result1.get(result1.size()-2));		

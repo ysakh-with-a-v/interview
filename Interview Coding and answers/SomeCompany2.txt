@@ -1,0 +1,14 @@
+
+1. Fetch a  json form a file and sort the students by age parallely?
+
+@Autowire
+private fileutil;
+
+ List<Students> listStdents=fileutil.getStudenst();
+ 
+  listStdents.parallelstream().filttwe(s-> s.age<10).sort(s->Comparator.compareInt,s.getage()).collector(collecios.tolist());
+ 
+2. How to handle exceptions in streams ? 
+ 
+ Optional<Student> student.orelse()
+ 

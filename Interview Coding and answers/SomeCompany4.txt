@@ -1,0 +1,38 @@
+
+1.Given 2 lists combine them and remove duplicates ?
+
+        Set<Integer> result = Stream.of(Arrays.asList(2, 3, 4, 4, 6, 6, 7), Arrays.asList(2, 4, 4, 8, 8, 7)).flatMap(List::stream).collect(Collectors.toSet());
+
+2.How to futures to do multiple tasks parallely and get the results ?
+        futures (task1);
+       futures (task2);
+		futures.get()
+3. What is pagination and write an api to do pagination ?
+
+        /book/?pageno=2&?records=10
+
+
+4.Write a program to print elements which are greater than the current element to the left ?
+
+        List<Integer> list3= Arrays.asList(6, 2, 9, 0, 16, 12);
+
+        for(int i=0 ; i<list3.size() ; i++){
+            System.out.println("The output is "+list3.get(i) + ":" + getGreater(i,list3));
+        }
+
+    }
+
+    public String getGreater(int index , List<Integer> listNumbers){
+
+        String output="";
+
+        for (int i=0 ; i< index;i++){
+            if(listNumbers.get(index)<listNumbers.get(i)){
+                output=output+" "+listNumbers.get(i);
+            }
+        }
+        return output;
+
+    }
+
+}

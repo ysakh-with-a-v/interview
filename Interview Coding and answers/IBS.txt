@@ -1,0 +1,38 @@
+
+1. Sort employees by salary ?
+
+List<Employee> emp ;
+
+emp.stream().sorted(Comparator.comapreint(e->e.getsalary())).collect(Collector.tolist());
+
+
+2. How to create custom exceptions ?
+
+class EmployeeNotfoundException extends Exception{
+
+}
+
+3. Incrent salary of employees with band 2A by 1000 ?
+
+emp.stream().filter(e-> e.getband().equals("2A")).map(emp-> emp.setslaray(emp.getsalary+10000)).collect(Collector.tolist());
+
+
+4.What is rest and write the implementation to getemployee details ?
+
+@RestController("/employee")
+class employeeController{
+
+@Autowired
+privte EmployeeService service;
+
+
+@GetMapping
+public ResponseEntity<Employee> getEmpList(){
+
+return new ResponseEntity<>(Httpstatis.ok,service.getEmpList());
+
+}
+
+
+
+}

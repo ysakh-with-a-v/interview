@@ -1,0 +1,32 @@
+1. find the count of characters in this string ?     
+
+	 String s = "daaabbbccddaa";
+
+        String[] strArr = s.split("");
+
+        Map<String, Long> countmap = Arrays.stream(strArr).collect(Collectors.groupingBy(string2 -> string2, Collectors.counting()));
+
+        System.out.println(countmap);
+
+2. Sort the list with the counts ?		
+
+        List<Map.Entry<String, Long>> result = countmap.entrySet().stream().sorted(Comparator.comparingLong(value -> value.getValue())).collect(Collectors.toList());
+
+
+        System.out.println("Sorted is" + result);
+		
+		
+
+
+3. Write singleton in pure java ?
+
+    private Interview interview;
+
+		    private Interview(){}
+
+        public synchronized Interview getInstance(){
+            if(interview==null){
+                this.interview=new Interview();
+            }
+            return interview;
+        }

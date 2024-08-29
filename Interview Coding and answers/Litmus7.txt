@@ -1,0 +1,27 @@
+
+1.Write a custom functional interface ?
+
+@functionalInterface
+public interface SumOfNos{
+
+public int sum(int a, int b);
+
+}
+
+
+SumOfNos sumofnos = (a,b)-> a+b;
+
+sumofnos.sum(a,b);
+
+2.How can you bring thredding in yor programs and write the implementation of runnable ?
+
+class SomeClass implements Runnable {
+
+
+	@overide
+	public void run(){
+	//
+	}
+
+
+}
