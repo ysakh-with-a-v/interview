@@ -1,7 +1,7 @@
 1.Why do we use spring-boot ?
 2.What is dependency injection ?
 3.What is @enableAutoconfiguration ?
-4.Explain @resrcontroller ?
+4.Explain @restcontroller ?
 5.Explain diffrent types of @controller ?
 6.What is loosly and tightly coupled systems ?
 7.What is circular dependency how can it be resolved ?
